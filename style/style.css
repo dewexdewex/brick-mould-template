@@ -1,0 +1,17 @@
+.text-display {
+    position: absolute;
+    top:200px;
+    left: 30px;
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    font-size: 120px;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari 3-8 */
+    transform: rotate(90deg);
+    letter-spacing: 4px;
+    
+}
