@@ -1,4 +1,4 @@
-.text-display {
+/*.text-display {
     position: absolute;
     top:200px;
     left: 30px;
@@ -8,10 +8,52 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-    font-size: 120px;
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari 3-8 */
-    transform: rotate(90deg);
-    letter-spacing: 4px;
-    
+    writing-mode: lr-tb;   
+}*/
+
+.background-form {
+    background-color: #333;
+}
+
+.gauge {
+    position: absolute;
+    top: 0px;
+    left: 200px;
+    z-index: -9999999;
+}
+/*https://www.thecssninja.com/css/real-text-rotation-with-css*/
+.text-to-cast {
+    position: absolute;
+    top: 0px;
+    left: 118px;
+    z-index: 9999999;
+}
+
+.arse {  
+    writing-mode: vertical-lr;
+    padding-top: 30px;
+    white-space: nowrap;
+    font-size: 72mm;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #000;
+}
+
+.brick {
+    width:65mm;
+    height:215mm;
+    border: dotted 1px #000;
+    margin-bottom: 10mm;
+}
+
+
+.mirror {
+    display:block; 
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform:matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.tracking {
+    letter-spacing: 0mm;
 }
