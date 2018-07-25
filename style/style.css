@@ -17,15 +17,37 @@
 
 .gauge {
     position: absolute;
-    top: 0px;
-    left: 200px;
+    top: 0mm;
+    left: 40mm;
     z-index: -9999999;
 }
+
+.top-edge {
+    position: absolute;
+    top: 0mm;
+    left: 35mm;
+    z-index: -9999999;
+    border-left: dotted 1px #FF0000;
+    width: 1px;
+    height: 400mm;
+}
+
+.bottom-edge {
+    position: absolute;
+    top: 0mm;
+    left: 110mm;
+    z-index: -9999999;
+    border-left: dotted 1px #FF0000;
+    width: 1px;
+    height: 400mm;
+}
+
+
 /*https://www.thecssninja.com/css/real-text-rotation-with-css*/
 .text-to-cast {
     position: absolute;
     top: 0px;
-    left: 118px;
+    left: 87px;
     z-index: 9999999;
 }
 
@@ -33,7 +55,7 @@
     writing-mode: vertical-lr;
     padding-top: 30px;
     white-space: nowrap;
-    font-size: 72mm;
+    font-size: 66mm;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     color: #000;

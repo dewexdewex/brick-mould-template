@@ -35,7 +35,10 @@
         </div>
         <div class="row">
             <div class="col-sm">
-                
+                <div class="top-edge">
+                </div>
+                <div class="bottom-edge">
+                </div>
                 <div id="gauge" class="gauge">
                     <div class="brick">
         
@@ -43,9 +46,15 @@
                     <div class="brick">
                         
                     </div>
+                    <div class="brick">
+                        
+                    </div>
+                    <div class="brick">
+                        
+                    </div>
                 </div>
                 <div class="text-to-cast">
-                    <span id="text-to-cast" class="arse mirror">WORKSHOP</span>
+                    <span id="text-to-cast" class="arse mirror"></span>
                 </div>
             </div>
         </div>
@@ -54,20 +63,20 @@
 <script>
 $(document).ready(function(){
 var textToCast = "";
+var tracking = 0;
    //Watch text box for change
    $("#textToCast").on("change", function(){
     textToCast = $( "#textToCast" ).val();
+    
     if (textToCast.search(/:/)) {
-        var tracking = parseInt(textToCast.substr(textToCast.lastIndexOf(':') + 1));
+        tracking = parseInt(textToCast.substr(textToCast.lastIndexOf(':') + 1));
         console.log(tracking);
         //Add a tracking class with the correct value
         $("#text-to-cast").css( "letter-spacing", tracking+"mm" );
         textToCast = textToCast.substring(0, textToCast.indexOf(':'));
         console.log(textToCast + " arse");
-
-
         $("#text-to-cast").html(textToCast.toUpperCase());
-    } else {
+    } else if (!textToCast.search(/:/)) {
         $("#text-to-cast").html(textToCast.toUpperCase());
     }
 
