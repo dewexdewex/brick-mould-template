@@ -11,8 +11,13 @@
     writing-mode: lr-tb;   
 }*/
 
-.background-form {
-    background-color: #333;
+
+
+.text-input {
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-left: 147px;
+    margin-top:30px;
 }
 
 .gauge {
@@ -47,11 +52,12 @@
 .text-to-cast {
     position: absolute;
     top: 0px;
-    left: 87px;
+    left: 129px;
     z-index: 9999999;
+    
 }
 
-.arse {  
+.text {  
     writing-mode: vertical-lr;
     padding-top: 30px;
     white-space: nowrap;
@@ -60,6 +66,21 @@
     font-weight: 700;
     color: #000;
 }
+
+#input1 {
+    position: relative;
+    display: block;
+    width: 400px;
+
+}
+
+#output1 {
+    position: relative;
+    width: 600px;
+    height: 12000px;
+    
+}
+
 
 .brick {
     width:65mm;

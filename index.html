@@ -7,58 +7,33 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700">
     <link href="https://fonts.googleapis.com/css?family=Raleway:700|Roboto:700" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <!-- Node server https://stackoverflow.com/questions/16333790/node-js-quick-file-server-static-files-over-http# -->
 
 <body>
+<div id="input1">
+    <input type="text" id="textToCast" class="text-input">
+</div>
 
 
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm">
-                <br>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="textToCast" aria-describedby="emailHelp" placeholder="">
-                </div>
-            </div>
-            <div class="col-sm">
-                
-            </div>
-            <div class="col-sm">
-                
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm">
-                <div class="top-edge">
-                </div>
-                <div class="bottom-edge">
-                </div>
-                <div id="gauge" class="gauge">
-                    <div class="brick">
-        
-                    </div>
-                    <div class="brick">
-                        
-                    </div>
-                    <div class="brick">
-                        
-                    </div>
-                    <div class="brick">
-                        
-                    </div>
-                </div>
-                <div class="text-to-cast">
-                    <span id="text-to-cast" class="arse mirror"></span>
-                </div>
-            </div>
-        </div>
+<div id="output1" class="">
+    <div class="top-edge"></div>
+    <div class="bottom-edge"></div>
+    <div id="gauge" class="gauge">
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
+        <div class="brick"></div>
     </div>
+    <div class="text-to-cast">
+        <span id="text-to-cast" class="text mirror"></span>
+    </div>
+</div>
+
+
 
 <script>
 $(document).ready(function(){
