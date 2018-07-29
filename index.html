@@ -18,6 +18,11 @@
     <input type="text" id="textToCast" class="text-input">
 </div>
 
+<div id="input2" class="fixed-buttons">
+    <a href="#" id="add-tracking" class="tracking-button">+</a>
+    <a href="#" id="subtract-tracking" class="tracking-button">-</a>
+</div>
+
 
 <div id="output1" class="">
     <div class="top-edge"></div>
@@ -38,25 +43,36 @@
 <script>
 $(document).ready(function(){
 var textToCast = "";
-var tracking = 0;
-   //Watch text box for change
-   $("#textToCast").on("change", function(){
-    textToCast = $( "#textToCast" ).val();
+var tracking = 1;
+console.log(tracking);
+    $("#input2").hide();
+    //Watch text box for change
+    $("#textToCast").on("keyup", function(){
+        $( "#textToCast" ).val()
+        if (!$("#textToCast" ).val()) {
+            $("#input2").hide();
+            $("#text-to-cast").html("");
+        } else {
+            $("#input2").show();
+            textToCast = $( "#textToCast" ).val();
+
+            $("#text-to-cast").html(textToCast.toUpperCase()); 
+        }
+    });
     
-    if (textToCast.search(/:/)) {
-        tracking = parseInt(textToCast.substr(textToCast.lastIndexOf(':') + 1));
+
+   //Clicking buttons
+   $("#add-tracking").on("click", function(event){
+        event.preventDefault();
         console.log(tracking);
-        //Add a tracking class with the correct value
-        $("#text-to-cast").css( "letter-spacing", tracking+"mm" );
-        textToCast = textToCast.substring(0, textToCast.indexOf(':'));
-        console.log(textToCast + " arse");
-        $("#text-to-cast").html(textToCast.toUpperCase());
-    } else if (!textToCast.search(/:/)) {
-        $("#text-to-cast").html(textToCast.toUpperCase());
-    }
-
-
-    
+        tracking++;
+        $("#text-to-cast").css( "letter-spacing", tracking+"mm");
+   });
+   $("#subtract-tracking").on("click", function(event){
+        event.preventDefault();
+        console.log(tracking);
+        tracking--;
+        $("#text-to-cast").css( "letter-spacing", tracking+"mm");
    });
 
 });
