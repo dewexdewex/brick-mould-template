@@ -13,10 +13,13 @@
 
 
 .text-input {
-    font-size: 24px;
     margin-bottom: 30px;
     margin-left: 147px;
     margin-top:30px;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding-left:20px;
 }
 
 .gauge {
@@ -78,6 +81,20 @@
     width: 600px;
     height: 12000px;
     
+}
+
+#output2 {
+    display: block;
+    position: fixed;
+    bottom: 64px;
+    left: 20px;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #000;
+    z-index: 999999999999;
+    background-color: #eee;
+    padding: 0px 10px 0px 10px;
 }
 
 
