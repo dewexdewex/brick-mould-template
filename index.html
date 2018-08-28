@@ -44,60 +44,39 @@
 
 <script>
 $(document).ready(function(){
-var textToCast = "";
-var tracking = 0;
-console.log(tracking);
-$("#output2").html(tracking);
+    var textToCast = "";
+    var tracking = 0;
+    $("#output2").html(tracking);
     $("#input2, #output2").hide();
-    //Watch text box for change
-    $("#textToCast").on("keyup", function(){
-        
+    $("#textToCast").on("keyup", function(){ 
         if (!$("#textToCast").val()) {
             $("#input2, #output2").hide();
             $("#text-to-cast").html("");
         } else {
-
             $("#input2, #output2").show();
             textToCast = $( "#textToCast" ).val();
-            //Trying to test for number input, but fails
-            //hasNumber(textToCast);
             $("#text-to-cast").html(textToCast.toUpperCase());
             $("#textToCast").val(textToCast.toUpperCase());
         }
     });
-    
-    /*function hasNumber(textToCast) {
-        if ( /\d/.test(textToCast) ) {
-            textToCast = textToCast.slice(0, -1);
-            console.log(textToCast);
-            return textToCast;
-        } else {
-            return textToCast;
-        }
-    };*/
-
-
-    //Clicking buttons
     $("#add-tracking").on("click", function(event){
         event.preventDefault();
-        console.log(tracking);
         tracking++;
         $("#text-to-cast").css( "letter-spacing", tracking+"mm");
         $("#output2").html(tracking);
     });
     $("#subtract-tracking").on("click", function(event){
         event.preventDefault();
-        console.log(tracking);
         tracking--;
         $("#text-to-cast").css( "letter-spacing", tracking+"mm");
         $("#output2").html(tracking);
     });
-
 });
 </script>
 
 
 </body>
+</html>
 
 
 
